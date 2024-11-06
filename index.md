@@ -98,17 +98,7 @@ This block includes the Eventbrite registration widget if
 are not using Eventbrite, or leave it in, since it will not be
 displayed if the 'eventbrite' field in the header is not set.
 {% endcomment %}
-{% if eventbrite %}
-<strong>Some adblockers block the registration window. If you do not see the
-  registration box below, please check your adblocker settings.</strong>
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="400px"
-  scrolling="auto">
-</iframe>
-{% endif %}
+
 
 
 <h2 id="general">General Information</h2>
@@ -119,35 +109,12 @@ INTRODUCTION
 Edit the general explanatory paragraph below if you want to change
 the pitch.
 {% endcomment %}
-{% if info.carpentry == "swc" %}
-{% include swc/intro.html %}
-{% elsif info.carpentry == "dc" %}
-{% include dc/intro.html %}
-{% elsif info.carpentry == "lc" %}
-{% include lc/intro.html %}
-{% elsif info.carpentry == "ds" %}
-{% include ds/intro.md %}
-{% remote_include {{lesson_meta}}/description.md %}
-{% endif %}
 
-{% comment %}
-AUDIENCE
+This workshop introduces version control with git and teaches you how to collaborate using git and GitLab.
 
-Explain who your audience is.  (In particular, tell readers if the
-workshop is only open to people from a particular institution.
-{% endcomment %}
-{% if info.carpentry == "swc" %}
-{% include swc/who.html %}
-{% elsif info.carpentry == "dc" %}
-{% include dc/who.html %}
-{% elsif info.carpentry == "lc" %}
-{% include lc/who.html %}
-{% elsif info.carpentry == "ds" %}
-<div style="display: flex"><div>
-     <strong>Who:&nbsp;</strong>
-     </div>
-     <div markdown=1>{% remote_include {{lesson_meta}}/who.md %}</div></div>
-{% endif %}
+Knowing how to use git and GitLab will allow you to keep track of changes in your software project, publish your code online and collaborate with several people in the same project.
+
+Specifically, this workshop will teach you good practices for collaboration that you will need while working on MAGNET.
 
 {% comment %}
 LOCATION
@@ -382,27 +349,49 @@ of code below the Schedule `<h2>` header below with
 
 {% if info.carpentry == "ds" %}
 <h2 id="syllabus">Syllabus</h2>
-{% remote_include {{lesson_meta}}/syllabus.md %}
+Introduction to version control with Git
+* What is version control and why should I use it?
+* Setting up Git locally
+* Creating a Git repository
+* Tracking changes: `git status`, `git add` & `git commit`
+* Exploring history: identify and recover old versions of files
+* Ignoring things with `.gitignore` files
+* Remote repositories in GitLab
+* Git branches
+
+Collaboration with Git and GitLab
+* Submitting changes through merge requests in GitLab
+* The peer review process
+* Dealing with merge conflicts
+* Using issues and the git workflow
+* Good practices for collaboration @MAGNET: dealing with large files, keep your branch in sync, git stash, merging vs rebasing
+
 {% endif %}
 
 <h2 id="schedule">Schedule</h2>
+<div class="row">
+  <div class="col-md-6">
+    <h3>Day 1 </h3>
+    <table class="table table-striped">
+      <tr> <td>10:00</td> <td>Welcome and icebreaker </td> </tr>
+      <tr> <td>10:00</td> <td>Workshop introduction </td> </tr>
+      <tr> <td>10:30</td>  <td>Introduction to Git, setting up Git </td> </tr>
+      <tr> <td>10:45</td>  <td>Creating a repository, tracking changes. </td> </tr>
+      <tr> <td>11:00</td>  <td>Coffee break</td> </tr>
+      <tr> <td>11:15</td>  <td>Exploring history, ignoring things </td> </tr>
+      <tr> <td>12:00</td>  <td>Remotes in GitLab</td> </tr>
+      <tr> <td>12:30</td>  <td>Lunch Break</td> </tr>
+      <tr> <td>13:30</td>  <td>Collaboration with Git and GitLab: The git workflow</td> </tr>
+      <tr> <td>15:15</td>  <td>Coffee break</td> </tr>
+      <tr> <td>15:30</td>  <td>Good practices for collaboration @MAGNET </td> </tr>
+      <tr> <td>16:45</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>17:00</td>  <td>DRINKS</td> </tr>
+    </table>
+  </div>
+</div>
 
-{% if info.carpentry == "swc" %}
-{% include swc/schedule.html %}
-{% elsif info.carpentry == "dc" %}
-{% include dc/schedule.html %}
-{% elsif info.carpentry == "lc" %}
-{% include lc/schedule.html %}
-{% elsif info.carpentry == "ds" %}
-{% remote_include {{lesson_meta}}/schedule.md %}
-{% elsif info.carpentry == "pilot" %}
-The lesson taught in this workshop is being piloted and a precise schedule is yet to be established. The workshop will include regular breaks. If you would like to know the timing of these breaks in advance, please [contact the workshop organisers](#contact). For a list of lesson sections and estimated timings, [visit the lesson homepage]({{ site.lesson_site }}).
-{% comment %}
-Edit/replace the text above if you want to include a schedule table.
-See the contents of the _includes/custom-schedule.html file for an example of
-how one of these schedule tables is constructed.
-{% endcomment %}
-{% endif %}
+<p><b>All times in the schedule are in the CET timezone.</b></p>
+
 
 <hr/>
 
@@ -457,9 +446,9 @@ during the workshop.
 {% include lc/setup.html %}
 {% elsif info.carpentry == "ds" %}
 {% capture content %}
-{% remote_include {{lesson_meta}}/setup.md %}
+{% remote_include {{lesson_meta}}/setup-gitlab.md %}
 {% endcapture %}
-{% if content contains "/setup.md" %}
+{% if content contains "/setup-gitlab.md" %}
   {% capture setup %}
   {% remote_include https://raw.githubusercontent.com/{{content | strip}} %}
   {% endcapture %}
