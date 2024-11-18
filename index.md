@@ -439,32 +439,35 @@ during the workshop.
 
 <h3 id="software-setup">Software setup</h3>
 
-{% if info.carpentry == "swc" %}
-{% include swc/setup.html %}
-{% elsif info.carpentry == "dc" %}
-{% include dc/setup.html %}
-{% elsif info.carpentry == "lc" %}
-{% include lc/setup.html %}
-{% elsif info.carpentry == "ds" %}
-{% capture content %}
-{% remote_include {{lesson_meta}}/setup-gitlab.md %}
-{% endcapture %}
-{% if content contains "/setup-gitlab.md" %}
-  {% capture setup %}
-  {% remote_include https://raw.githubusercontent.com/{{content | strip}} %}
-  {% endcapture %}
-  {{ setup | split: "---" | last}}
-{% else %}
-  {{ content }}
-{% endif %}
-{% elsif info.carpentry == "pilot" %}
-Please check the "Setup" page of
-[the lesson site]({{ site.lesson_site }}) for instructions to follow
-to obtain the software and data you will need to follow the lesson.
-{% endif %}
+### Computer
 
-{% comment %}
-For online workshops, the section below provides:
+Participants must work on a computer with a Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.). If you normally work in a remote environment, please follow below setup instructions in the remote environment.
+
+### Software
+
+To participate in this workshop, you will need to prepare the following (if you haven't already):
+- Install Shell and Git. Please refer to [this page](https://coderefinery.github.io/installation/git-in-terminal/#installation) for installation instructions.
+- Create a GitLab account. [You can sign up here](https://gitlab.com/users/sign_up).
+- Make sure you can push to and pull from https://git.wur.nl/
+
+### To confirm that everything works
+
+You should now be able to open [a terminal window](https://swcarpentry.github.io/shell-novice/#open-a-new-shell) and execute the following commands:
+
+#### Git
+```
+git --version
+```
+returning (something similar to):
+```
+git version 2.37.1 (Apple Git-137.1)
+```
+
+#### If something does not work:
+Follow the corresponding setup instructions. There will be a check-in session the week before where you can ask questions regarding the setup. 
+If you still need help, send us an email at training@esciencecenter.nl.
+
+{% comment %}For online workshops, the section below provides:
 - installation instructions for the Zoom client
 - recommendations for setting up Learners' workspace so they can follow along
   the instructions and the videoconferencing
