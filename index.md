@@ -467,7 +467,8 @@ git version 2.37.1 (Apple Git-137.1)
 Follow the corresponding setup instructions. There will be a check-in session the week before where you can ask questions regarding the setup. 
 If you still need help, send us an email at training@esciencecenter.nl.
 
-{% comment %}For online workshops, the section below provides:
+{% comment %}
+For online workshops, the section below provides:
 - installation instructions for the Zoom client
 - recommendations for setting up Learners' workspace so they can follow along
   the instructions and the videoconferencing
