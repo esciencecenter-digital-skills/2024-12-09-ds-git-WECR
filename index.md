@@ -464,7 +464,7 @@ git version 2.37.1 (Apple Git-137.1)
 ```
 
 #### If something does not work:
-Follow the corresponding setup instructions. There will be a check-in session the week before where you can ask questions regarding the setup. 
+Follow the corresponding setup instructions. There will be a check-in session the week before the workshop where you can ask questions regarding the setup. 
 If you still need help, send us an email at training@esciencecenter.nl.
 
 {% comment %}
