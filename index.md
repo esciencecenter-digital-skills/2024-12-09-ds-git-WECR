@@ -447,7 +447,7 @@ Participants must work on a computer with a Mac, Linux, or Windows operating sys
 
 To participate in this workshop, you will need to prepare the following (if you haven't already):
 - Install Shell and Git. Please refer to [this page](https://coderefinery.github.io/installation/git-in-terminal/#installation) for installation instructions.
-- Create a GitLab account. [You can sign up here](https://gitlab.com/users/sign_up).
+- Request a GitLab account for https://git.wur.nl/ if you don't have one yet.
 - Make sure you can push to and pull from https://git.wur.nl/
 
 ### To confirm that everything works
