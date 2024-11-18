@@ -373,8 +373,9 @@ Collaboration with Git and GitLab
   <div class="col-md-6">
     <h3>Day 1 </h3>
     <table class="table table-striped">
-      <tr> <td>10:00</td> <td>Welcome and icebreaker </td> </tr>
-      <tr> <td>10:00</td> <td>Workshop introduction </td> </tr>
+      <tr> <td>09:45</td>  <td>Walk-in with coffee and cookies </td> </tr>
+      <tr> <td>10:00</td>  <td>Welcome and icebreaker </td> </tr>
+      <tr> <td>10:00</td>  <td>Workshop introduction </td> </tr>
       <tr> <td>10:30</td>  <td>Introduction to Git, setting up Git </td> </tr>
       <tr> <td>10:45</td>  <td>Creating a repository, tracking changes. </td> </tr>
       <tr> <td>11:00</td>  <td>Coffee break</td> </tr>
@@ -385,7 +386,7 @@ Collaboration with Git and GitLab
       <tr> <td>15:15</td>  <td>Coffee break</td> </tr>
       <tr> <td>15:30</td>  <td>Good practices for collaboration @MAGNET </td> </tr>
       <tr> <td>16:45</td>  <td>Wrap-up</td> </tr>
-      <tr> <td>17:00</td>  <td>DRINKS</td> </tr>
+      <tr> <td>17:00</td>  <td>Drinks and dinner @Minglemush (at own cost)</td> </tr>
     </table>
   </div>
 </div>
