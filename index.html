@@ -1,0 +1,471 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta name="slug" content="2024-12-09-ds-git-WECR" />
+    <meta name="startdate" content="2024-12-08T23:00:00Z" />
+    <meta name="enddate" content="2024-12-08T23:00:00Z" />
+    <meta name="humandate" content="December 09, 2024" />
+    <meta name="country" content="Netherlands" />
+    <meta name="venue" content="Wageningen Economic Research" />
+    <meta name="address" content="Wageningen Economic Research room 'City', WTC den Haag, Pr. Beatrixlaan 582 - 528, 2595 BM Den Haag" />
+    <meta name="latlng" content="52.07909727685633, 4.336454727225929" />
+    <meta name="language" content="" />
+    <meta name="eventbrite" content="" />
+    <meta name="instructor" content="Sven van der Burg, Lucas Esclapez" />
+    <meta name="helper" content="Willem-Jan van Zeist, Heleen Bartelings" />
+    <meta name="contact" content="training@esciencecenter.nl" />
+    <meta name="carpentry" content="ds" />
+
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="">
+
+    
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2024-12-05 06:55:30 +0000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css" />
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/lesson.css" />
+
+    
+
+
+
+
+
+    <!-- Favicons for everyone -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./assets/favicons/ds/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/favicons/ds/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/favicons/ds/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/favicons/ds/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./assets/favicons/ds/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./assets/favicons/ds/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./assets/favicons/ds/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./assets/favicons/ds/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="./assets/favicons/ds/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="./assets/favicons/ds/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="./assets/favicons/ds/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./assets/favicons/ds/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="./assets/favicons/ds/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="Digital Skills - Collaborative version control with Git and GitLab"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="./assets/favicons/ds/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="./assets/favicons/ds/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="./assets/favicons/ds/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="./assets/favicons/ds/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="./assets/favicons/ds/mstile-310x310.png" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+    <title>Wageningen Economic Research: December 09, 2024</title>
+  </head>
+  <body>
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      <a href="https://www.esciencecenter.nl/" class="pull-left">
+        <img class="navbar-logo" src="./assets/img/netherlands-escience-center-logo-RGB.svg" alt="The Netherlands eScience Center logo" />
+      </a>
+      
+
+      
+      <a class="navbar-brand" href="./">Home</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+	
+        
+
+        
+
+	
+	
+
+	
+        
+        <li><a href="https://esciencecenter-digital-skills.github.io/license">License</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      
+
+
+
+
+
+
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      
+      <h1>Collaborative version control with Git and GitLab</h1>
+      
+      <h2>Wageningen Economic Research</h2>
+      <div class="row">
+        <div class="col-md-6">
+          
+          <p>December 09, 2024</p>
+          <p>10:00 - 17:00 CET</p>
+        </div>
+        <div class="col-md-6">
+          <p>
+          <strong>Instructors:</strong>
+          
+          Sven van der Burg, Lucas Esclapez
+          
+          </p>
+          
+          <p>
+          <strong>Helpers:</strong>
+          Willem-Jan van Zeist, Heleen Bartelings
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<h2 id="general">General Information</h2>
+
+<p>This workshop introduces version control with git and teaches you how to collaborate using git and GitLab.</p>
+
+<p>Knowing how to use git and GitLab will allow you to keep track of changes in your software project, publish your code online and collaborate with several people in the same project.</p>
+
+<p>Specifically, this workshop will teach you good practices for collaboration that you will need while working on MAGNET.</p>
+
+<p id="where">
+  <strong>Where:</strong>
+  Wageningen Economic Research room 'City', WTC den Haag, Pr. Beatrixlaan 582 - 528, 2595 BM Den Haag.
+  Get directions with
+  <a href="//www.openstreetmap.org/?mlat=52.07909727685633&amp;mlon= 4.336454727225929&amp;zoom=16">OpenStreetMap</a>
+  or
+  <a href="//maps.google.com/maps?q=52.07909727685633, 4.336454727225929">Google Maps</a>.
+</p>
+
+<p id="when">
+  <strong>When:</strong>
+  
+    December 09, 2024, 10:00 - 17:00 CET.
+  
+</p>
+
+<p id="requirements">
+  <strong>Requirements:</strong>
+  
+    Participants must bring a laptop with a
+    Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
+  
+  They should have a few specific software packages installed (listed <a href="#setup">below</a>).
+</p>
+
+<p id="accessibility">
+  <strong>Accessibility:</strong>
+
+  We are committed to making this workshop
+  accessible to everybody. The workshop organizers have checked that:
+</p>
+<ul>
+  <li>The room is wheelchair / scooter accessible.</li>
+  <li>Accessible restrooms are available.</li>
+</ul>
+<p>
+  Materials will be provided in advance of the workshop and
+  large-print handouts are available if needed by notifying the
+  organizers in advance.  If we can help making learning easier for
+  you (e.g. sign-language interpreters, lactation facilities) please
+  get in touch (using contact details below) and we will
+  attempt to provide them.
+</p>
+
+<p id="files">
+  <strong>Workshop files:</strong>
+  You will find all slides, notebooks, archived collaborative documents, and other relevant files in the <a href="https://github.com/esciencecenter-digital-skills/2024-12-09-ds-git-WECR/tree/main/files">files</a> folder of the workshop website repository after the workshop.
+</p>
+
+<p id="contact">
+  <strong>Contact:</strong>
+  Please email
+  
+  
+  
+  or
+  
+  <a href="mailto:training@esciencecenter.nl">training@esciencecenter.nl</a>
+  
+  
+  for more information.
+</p>
+
+<hr />
+
+<h2 id="code-of-conduct">Code of Conduct</h2>
+
+<p>
+Participants are expected to follow these guidelines:
+<ul>
+  <li>Use welcoming and inclusive language</li>
+  <li>Be respectful of different viewpoints and experiences</li>
+  <li>Gracefully accept constructive criticism</li>
+  <li>Focus on what is best for the community</li>
+  <li>Show courtesy and respect towards other community members</li>
+</ul>
+</p>
+
+<h2 id="syllabus">Syllabus</h2>
+<p>Introduction to version control with Git</p>
+<ul>
+  <li>What is version control and why should I use it?</li>
+  <li>Setting up Git locally</li>
+  <li>Creating a Git repository</li>
+  <li>Tracking changes: <code class="language-plaintext highlighter-rouge">git status</code>, <code class="language-plaintext highlighter-rouge">git add</code> &amp; <code class="language-plaintext highlighter-rouge">git commit</code></li>
+  <li>Exploring history: identify and recover old versions of files</li>
+  <li>Ignoring things with <code class="language-plaintext highlighter-rouge">.gitignore</code> files</li>
+  <li>Remote repositories in GitLab</li>
+  <li>Git branches</li>
+</ul>
+
+<p>Collaboration with Git and GitLab</p>
+<ul>
+  <li>Submitting changes through merge requests in GitLab</li>
+  <li>The peer review process</li>
+  <li>Dealing with merge conflicts</li>
+  <li>Using issues and the git workflow</li>
+  <li>Good practices for collaboration @MAGNET: dealing with large files, keep your branch in sync, git stash, merging vs rebasing</li>
+</ul>
+
+<h2 id="schedule">Schedule</h2>
+<div class="row">
+  <div class="col-md-6">
+    <h3>Day 1 </h3>
+    <table class="table table-striped">
+      <tr> <td>09:45</td>  <td>Walk-in with coffee and cookies </td> </tr>
+      <tr> <td>10:00</td>  <td>Welcome and icebreaker </td> </tr>
+      <tr> <td>10:00</td>  <td>Workshop introduction </td> </tr>
+      <tr> <td>10:30</td>  <td>Introduction to Git, setting up Git </td> </tr>
+      <tr> <td>10:45</td>  <td>Creating a repository, tracking changes. </td> </tr>
+      <tr> <td>11:00</td>  <td>Coffee break</td> </tr>
+      <tr> <td>11:15</td>  <td>Exploring history, ignoring things </td> </tr>
+      <tr> <td>12:00</td>  <td>Remotes in GitLab</td> </tr>
+      <tr> <td>12:30</td>  <td>Lunch Break</td> </tr>
+      <tr> <td>13:30</td>  <td>Collaboration with Git and GitLab: The git workflow</td> </tr>
+      <tr> <td>15:15</td>  <td>Coffee break</td> </tr>
+      <tr> <td>15:30</td>  <td>Good practices for collaboration @MAGNET </td> </tr>
+      <tr> <td>16:45</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>17:00</td>  <td>Drinks and dinner @Minglemush (at own cost)</td> </tr>
+    </table>
+  </div>
+</div>
+
+<p><b>All times in the schedule are in the CET timezone.</b></p>
+
+<hr />
+
+<h2 id="setup">Setup</h2>
+
+<p>
+  To participate in
+  
+  this
+  
+  workshop,
+  you will need access to software as described below.
+  In addition, you will need an up-to-date web browser.
+</p>
+<p>
+  We maintain a list of common issues that occur during installation as a reference for instructors
+  that may be useful on the
+  <a href="https://github.com/swcarpentry/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
+</p>
+
+<h3 id="software-setup">Software setup</h3>
+
+<h3 id="computer">Computer</h3>
+
+<p>Participants must work on a computer with a Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.). If you normally work in a remote environment, please follow below setup instructions in the remote environment.</p>
+
+<h3 id="software">Software</h3>
+
+<p>To participate in this workshop, you will need to prepare the following (if you haven’t already):</p>
+<ul>
+  <li>Install Shell and Git. Please refer to <a href="https://coderefinery.github.io/installation/git-in-terminal/#installation">this page</a> for installation instructions.</li>
+  <li>Request a GitLab account for https://git.wur.nl/ if you don’t have one yet.</li>
+  <li>Make sure you can push to and pull from https://git.wur.nl/</li>
+</ul>
+
+<h3 id="to-confirm-that-everything-works">To confirm that everything works</h3>
+
+<p>You should now be able to open <a href="https://swcarpentry.github.io/shell-novice/#open-a-new-shell">a terminal window</a> and execute the following commands:</p>
+
+<h4 id="git">Git</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git --version
+</code></pre></div></div>
+<p>returning (something similar to):</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git version 2.37.1 (Apple Git-137.1)
+</code></pre></div></div>
+
+<h4 id="if-something-does-not-work">If something does not work:</h4>
+<p>Follow the corresponding setup instructions. There will be a check-in session the week before the workshop where you can ask questions regarding the setup. 
+If you still need help, send us an email at training@esciencecenter.nl.</p>
+
+
+      
+
+
+<footer>
+  <hr/>
+  <div class="row">
+    <div class="col-md-6" align="left">
+      <h4>
+	Copyright &copy; 2016–2024
+	
+        <a href="https://carpentries.org/">The Carpentries</a>
+	
+      </h4>
+    </div>
+    <div class="col-md-6" align="right">
+      <h4>
+        
+        <a href="mailto:training@esciencecenter.nl">Contact The Training Team</a>
+        
+      </h4>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    
+
+
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/lesson.js"></script>
+
+<script>
+/* Based on https://stackoverflow.com/a/30894829/1802726 */
+var show_instructions = function() {
+     //set all nav tabs to inactive
+    $('.nav-tabs li').removeClass('active');
+
+    //get all nav tabs matching the os and set to active
+    $('.nav-tabs li a[href*="'+localStorage.os+'"]').closest('li').addClass('active');
+
+    //set all tabs to inactive
+    $('.tab-pane').removeClass('active');
+
+    //get all tabs matching the os and set to active
+    $('.tab-pane[id*="'+localStorage.os+'"]').addClass('active');
+}
+
+if (typeof(Storage) !== "undefined") {
+    if (localStorage.os == "undefined") {
+        localStorage.os = "windows";
+    }
+    show_instructions();
+} else {
+    console.log("No localStorage");
+}
+
+/* Based on https://stackoverflow.com/a/30894829/1802726 */
+$('.nav-tabs li a').click(function(){
+    //get selected os
+    localStorage.os = $(this)[0].dataset.os;
+    show_instructions();
+});
+
+  // detect misssing iframe for Eventbrite
+  $(document).ready(function(){
+      if ($('iframe').height() == 0) {
+          $('iframe').before('<p>Looks like your adblocker blocked the registration window. Please navigate to <a href="https://www.eventbrite.com/tickets-external?eid=&ref=etckt">https://www.eventbrite.com/tickets-external?eid=&ref=etckt</a> to register.</p>');
+      }
+  });
+
+  // hide alerts when site is rendered on carpentries.github.io
+  $(document).ready(function() {
+      if (location.href.startsWith("https://carpentries.github.io/workshop-template/")) {
+          $("div.alert").hide();
+      }
+  });
+
+</script>
+
+  </body>
+</html>
